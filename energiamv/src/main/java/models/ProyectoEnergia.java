@@ -9,12 +9,14 @@ public class ProyectoEnergia {
     private String tiempoVida;
     private String ubicacion;
     private float capacidadGeneracionDiaria;
+    private int cantidadProyectos;
+    private Integer idProyecto;
 
     private Inversionista[] inversionistas;
     private int numeroInversionistas;
 
     // Constructor
-    public ProyectoEnergia(String nombreProyecto, String estado, double montoInversion, String tiempoInicioConstruccion, String tiempoFinConstruccion, String tiempoVida, String ubicacion, float capacidadGeneracionDiaria) {
+    public ProyectoEnergia(String nombreProyecto, String estado, double montoInversion, String tiempoInicioConstruccion, String tiempoFinConstruccion, String tiempoVida, String ubicacion, float capacidadGeneracionDiaria, int cantidadProyectos, Integer idProyecto) {
         this.nombreProyecto = nombreProyecto;
         this.estado = estado;
         this.montoInversion = montoInversion;
@@ -25,6 +27,8 @@ public class ProyectoEnergia {
         this.capacidadGeneracionDiaria = capacidadGeneracionDiaria;
         this.inversionistas = new Inversionista[10]; //inicialmente sera 10, pero con metodos se podra aumentar
         this.numeroInversionistas = 0;
+        this.cantidadProyectos = 0;
+        this.idProyecto = idProyecto;
     }
 
 
@@ -111,8 +115,22 @@ public class ProyectoEnergia {
         this.numeroInversionistas = numeroInversionistas;
     }
 
-    // Metodos
+    // GS Num proyectos
 
+    public int getCantidadProyectos(){
+        return cantidadProyectos;   
+    }
 
+    public void setCantidadProyectos(){
+        this.cantidadProyectos = cantidadProyectos;
+    }
+
+    public Integer getIdProyecto(){
+        return idProyecto;
+    }
+
+    public void setIdProyecto(Integer idProyecto){
+        this.idProyecto = idProyecto;
+    }
 
 }

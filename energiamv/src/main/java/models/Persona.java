@@ -7,6 +7,13 @@ public class Persona {
     private String DNI;
     private String celular;
 
+//new
+    //private Persona obj;
+
+    public Persona() {
+        //obj = new Persona();
+    }
+//---
 
     public Persona(int idPersona, String nombre, String apellido, String DNI, String celular) {
         this.idPersona = idPersona;

@@ -4,6 +4,10 @@ public class Inversionista extends Persona{
     private float montoInvertido;
     private String tipoInversionista;
 
+    // public Inversionista() {
+    //     obj = new Inversionista();
+    // }
+
     public Inversionista(int idPersona, String nombre, String apellido, String DNI, String celular) {
         super(idPersona, nombre, apellido, DNI, celular);
     }
