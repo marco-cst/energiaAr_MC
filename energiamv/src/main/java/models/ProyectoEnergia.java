@@ -1,6 +1,7 @@
 package models;
 
 public class ProyectoEnergia {
+    private Integer idProyecto;
     private String nombreProyecto;
     private String estado;
     private double montoInversion;
@@ -10,13 +11,13 @@ public class ProyectoEnergia {
     private String ubicacion;
     private float capacidadGeneracionDiaria;
     private int cantidadProyectos;
-    private Integer idProyecto;
 
     private Inversionista[] inversionistas;
     private int numeroInversionistas;
 
     // Constructor
-    public ProyectoEnergia(String nombreProyecto, String estado, double montoInversion, String tiempoInicioConstruccion, String tiempoFinConstruccion, String tiempoVida, String ubicacion, float capacidadGeneracionDiaria, int cantidadProyectos, Integer idProyecto) {
+    public ProyectoEnergia(Integer idProyecto, String nombreProyecto, String estado, double montoInversion, String tiempoInicioConstruccion, String tiempoFinConstruccion, String tiempoVida, String ubicacion, float capacidadGeneracionDiaria, int cantidadProyectos) {
+        this.idProyecto = idProyecto;
         this.nombreProyecto = nombreProyecto;
         this.estado = estado;
         this.montoInversion = montoInversion;
@@ -28,11 +29,18 @@ public class ProyectoEnergia {
         this.inversionistas = new Inversionista[10]; //inicialmente sera 10, pero con metodos se podra aumentar
         this.numeroInversionistas = 0;
         this.cantidadProyectos = 0;
-        this.idProyecto = idProyecto;
     }
 
 
     // Getters y Setters
+    public Integer getIdProyecto(){
+        return idProyecto;
+    }
+
+    public void setIdProyecto(Integer idProyecto){
+        this.idProyecto = idProyecto;
+    }
+
     public String getNombreProyecto() {
         return nombreProyecto;
     }
@@ -123,14 +131,6 @@ public class ProyectoEnergia {
 
     public void setCantidadProyectos(){
         this.cantidadProyectos = cantidadProyectos;
-    }
-
-    public Integer getIdProyecto(){
-        return idProyecto;
-    }
-
-    public void setIdProyecto(Integer idProyecto){
-        this.idProyecto = idProyecto;
     }
 
 }

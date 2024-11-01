@@ -55,7 +55,12 @@ public class ProyectoEnergiaDao {
         if (!directory.exists()) {
             directory.mkdirs();
         }
-        AdapterDao.saveProyectos(proyectos, "src/main/java/Data/proyectos.json");
+
+        //AdapterDao.saveProyecto(proyectos, "src/main/java/Data/proyectos.json");
+        for (ProyectoEnergia proyecto : proyectos) {
+            AdapterDao.saveProyecto(proyecto, "src/main/java/Data/proyectos.json");
+        }
+
         //AdapterDao.saveInversionistas(inversionistaDao.getInversionistas(), "src/main/java/Data/inversionistas.json");
         for (Inversionista inversionista : inversionistaDao.getInversionistas()) {
             AdapterDao.saveInversionistas(inversionista, "src/main/java/Data/inversionistas.json");
@@ -63,7 +68,7 @@ public class ProyectoEnergiaDao {
     }
 
     public void cargarDatos() {
-        proyectos = AdapterDao.subirProyecto("proyectos.json");
+        proyectos = AdapterDao.cargarProyectos("proyectos.json");
         inversionistaDao.setInversionistas(AdapterDao.cargarInversionistas("inversionistas.json"));
         cantidadProyectos = proyectos.length;
     }

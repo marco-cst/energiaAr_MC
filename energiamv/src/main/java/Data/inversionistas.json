@@ -73,5 +73,14 @@
     "celular": "092492",
     "montoInvertido": 1400.2,
     "tipoInversionista": "Inversionista Publico"
+  },
+  {
+    "idPersona": 10,
+    "nombre": "Dari",
+    "apellido": "Gonz",
+    "DNI": "190774393",
+    "celular": "09244122392",
+    "montoInvertido": 15600.2,
+    "tipoInversionista": "Inversionista Privado"
   }
 ]

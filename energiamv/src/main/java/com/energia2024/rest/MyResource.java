@@ -11,6 +11,7 @@ import javax.ws.rs.core.Response;
 import controller.Dao.implement.AdapterDao;
 import controller.Dao.services.PersonaServices;
 import models.Inversionista;
+import models.ProyectoEnergia;
 
 /**
  * Root resource (exposed at "myresource" path)
@@ -99,6 +100,7 @@ DE COMENTARIO*/
  @Path("myresource")
  public class MyResource {
  
+    //persona-inversionista
      @GET
      @Produces(MediaType.APPLICATION_JSON)
      public Response getIt() {
@@ -108,7 +110,7 @@ DE COMENTARIO*/
  
          try {
              //Persona persona = pd.getPersona();
-             Inversionista inversionista = new Inversionista(9, "Cali", "Donma", "19048324", "092492", 1400.20f, "Inversionista Publico");
+             Inversionista inversionista = new Inversionista(10, "Dari", "Gonz", "190774393", "09244122392", 15600.20f, "Inversionista Privado");
              /*
              inversionista.setMontoInvertido(1000.75f);
              inversionista.setTipoInversionista("Inversionista Privado");
@@ -137,4 +139,42 @@ DE COMENTARIO*/
          mapa.put("data", aux);
          return Response.ok(mapa).build();
      }
+
+
+     //proyectos
+     @GET
+     @Path("/saveProyecto")
+     @Produces(MediaType.APPLICATION_JSON)
+     public Response saveProyecto() {
+         HashMap<String, String> mapa = new HashMap<>();
+         String aux = "";
+ 
+         try {
+             ProyectoEnergia proyecto = new ProyectoEnergia(2, "Proyecto Parque eolico", "En construccion", 500000.00, "2023-02-02", "2024-12-31", "20 años", "Loja", 120000.0f, 1);
+
+            //asginar inversionista a proyectos.
+            Inversionista[] inversionistas = AdapterDao.cargarInversionistas("inversionistas.json");
+
+            if (inversionistas.length > 0) {
+                proyecto.setInversionistas(new Inversionista[]{inversionistas[0], inversionistas[1]});
+                proyecto.setNumeroInversionistas(2);
+            }
+            //fin asignacion
+
+             AdapterDao.saveProyecto(proyecto, "proyectos.json");
+ 
+             aux = "Proyecto guardado: ";
+ 
+         } catch (Exception e) {
+             System.out.println("Error al guardar: " + e);
+             mapa.put("msg", "error");
+             mapa.put("data", e.getMessage());
+             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(mapa).build();
+         }
+ 
+         mapa.put("msg", "ok");
+         mapa.put("data", aux);
+         return Response.ok(mapa).build();
+     }
+     
  }

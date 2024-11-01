@@ -1,0 +1,83 @@
+[
+  {
+    "idProyecto": 1,
+    "nombreProyecto": "Proyecto Hidroelectrica",
+    "estado": "En construccion",
+    "montoInversion": 500000.0,
+    "tiempoInicioConstruccion": "2023-01-01",
+    "tiempoFinConstruccion": "2023-12-31",
+    "tiempoVida": "20 años",
+    "ubicacion": "El Oro",
+    "capacidadGeneracionDiaria": 1000.0,
+    "cantidadProyectos": 0,
+    "inversionistas": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "numeroInversionistas": 0
+  },
+  {
+    "idProyecto": 1,
+    "nombreProyecto": "Proyecto Hidroelectrica",
+    "estado": "En construccion",
+    "montoInversion": 500000.0,
+    "tiempoInicioConstruccion": "2023-01-01",
+    "tiempoFinConstruccion": "2023-12-31",
+    "tiempoVida": "20 años",
+    "ubicacion": "El Oro",
+    "capacidadGeneracionDiaria": 1000.0,
+    "cantidadProyectos": 0,
+    "inversionistas": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "numeroInversionistas": 0
+  },
+  {
+    "idProyecto": 2,
+    "nombreProyecto": "Proyecto Parque eolico",
+    "estado": "En construccion",
+    "montoInversion": 500000.0,
+    "tiempoInicioConstruccion": "2023-02-02",
+    "tiempoFinConstruccion": "2024-12-31",
+    "tiempoVida": "20 años",
+    "ubicacion": "Loja",
+    "capacidadGeneracionDiaria": 120000.0,
+    "cantidadProyectos": 0,
+    "inversionistas": [
+      {
+        "idPersona": 1,
+        "nombre": "Joan",
+        "apellido": "Perez",
+        "DNI": "001-0000000-0",
+        "celular": "809-000-0000",
+        "montoInvertido": 0.0
+      },
+      {
+        "idPersona": 2,
+        "nombre": "Martin",
+        "apellido": "Jofre",
+        "DNI": "07808023",
+        "celular": "099988335",
+        "montoInvertido": 0.0
+      }
+    ],
+    "numeroInversionistas": 2
+  }
+]
