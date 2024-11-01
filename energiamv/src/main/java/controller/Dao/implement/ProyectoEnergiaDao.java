@@ -56,7 +56,10 @@ public class ProyectoEnergiaDao {
             directory.mkdirs();
         }
         AdapterDao.saveProyectos(proyectos, "src/main/java/Data/proyectos.json");
-        AdapterDao.saveInversionistas(inversionistaDao.getInversionistas(), "src/main/java/Data/inversionistas.json");
+        //AdapterDao.saveInversionistas(inversionistaDao.getInversionistas(), "src/main/java/Data/inversionistas.json");
+        for (Inversionista inversionista : inversionistaDao.getInversionistas()) {
+            AdapterDao.saveInversionistas(inversionista, "src/main/java/Data/inversionistas.json");
+        }
     }
 
     public void cargarDatos() {

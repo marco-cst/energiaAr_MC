@@ -15,8 +15,13 @@ import models.Persona;
 /**
  * Root resource (exposed at "myresource" path)
  */
+
+ /* */
+
+ /* INICIO Y FIN
 @Path("myresource")
 public class MyResource {
+DE COMENTARIO*/
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
@@ -24,7 +29,7 @@ public class MyResource {
      *
      * @return String that will be returned as a text/plain response.
      */
-    
+/*
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
@@ -38,14 +43,17 @@ public class MyResource {
         try {
             Persona persona = pd.getPersona();
             pd.getPersona().setIdPersona(2);
-            pd.getPersona().setNombre("Jose");
-            pd.getPersona().setApellido("Valdez");
-            pd.getPersona().setDNI("001-9999999-0");
-            pd.getPersona().setCelular("999-111-3333");
+            pd.getPersona().setNombre("Josefine");
+            pd.getPersona().setApellido("Vargosa");
+            pd.getPersona().setDNI("001-882893-092");
+            pd.getPersona().setCelular("999-342-123");
 
-            AdapterDao.savePersona(persona, "inversionista.json");
+            // Inversionista inversionista = new Inversionista(persona.getIdPersona(), persona.getNombre(), persona.getApellido(), persona.getDNI(), persona.getCelular());
+            // AdapterDao.saveInversionistas(inversionista, "inversonista.json");
+
+           AdapterDao.savePersona(persona, "inversionista.json");
             
-            aux = "se agregan datos a la lista " ; //+persona
+            aux = "se agregan datos a la lista " + persona; //+persona
 
         } catch (Exception e) {
             System.out.println("Error al guardar: " + e);
@@ -59,6 +67,9 @@ public class MyResource {
         return Response.ok(mapa).build();
     }
     
+}
+     */
+
 /*
     private ProyectoEnergiaDao proyectoEnergiaDao = new ProyectoEnergiaDao();
     private InversionistaDao inversionistaDao = new InversionistaDao();
@@ -85,4 +96,38 @@ public class MyResource {
 
  */
 
-}
+ @Path("myresource")
+ public class MyResource {
+ 
+     @GET
+     @Produces(MediaType.APPLICATION_JSON)
+     public Response getIt() {
+         HashMap<String, String> mapa = new HashMap<>();
+         PersonaServices pd = new PersonaServices();
+         String aux = "";
+ 
+         try {
+             Persona persona = pd.getPersona();
+             persona.setIdPersona(3);
+             persona.setNombre("Juan");
+             persona.setApellido("Aguilar");
+             persona.setDNI("001-8765556-0");
+             persona.setCelular("123-2345-086");
+             
+             // Guardar la persona en un archivo JSON
+             AdapterDao.savePersona(persona, "personas.json");
+
+             aux = "Persona guardada: " + persona;
+ 
+         } catch (Exception e) {
+             System.out.println("Error al guardar: " + e);
+             mapa.put("msg", "error");
+             mapa.put("data", e.getMessage());
+             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(mapa).build();
+         }
+ 
+         mapa.put("msg", "ok");
+         mapa.put("data", aux);
+         return Response.ok(mapa).build();
+     }
+ }
