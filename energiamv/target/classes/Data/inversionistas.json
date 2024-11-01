@@ -1,0 +1,77 @@
+[
+  {
+    "idPersona": 1,
+    "nombre": "Joan",
+    "apellido": "Perez",
+    "DNI": "001-0000000-0",
+    "celular": "809-000-0000",
+    "montoInvertido": 0.0
+  },
+  {
+    "idPersona": 2,
+    "nombre": "Martin",
+    "apellido": "Jofre",
+    "DNI": "07808023",
+    "celular": "099988335",
+    "montoInvertido": 0.0
+  },
+  {
+    "idPersona": 3,
+    "nombre": "Maria",
+    "apellido": "Balzar",
+    "DNI": "11034023",
+    "celular": "098754343",
+    "montoInvertido": 0.0
+  },
+  {
+    "idPersona": 4,
+    "nombre": "Martin",
+    "apellido": "Herrera",
+    "DNI": "110438765",
+    "celular": "098654334",
+    "montoInvertido": 0.0
+  },
+  {
+    "idPersona": 5,
+    "nombre": "Angelo",
+    "apellido": "Bolivar",
+    "DNI": "19045625",
+    "celular": "098465763",
+    "montoInvertido": 0.0
+  },
+  {
+    "idPersona": 6,
+    "nombre": "Ana",
+    "apellido": "Salazar",
+    "DNI": "19023135",
+    "celular": "09849549853",
+    "montoInvertido": 0.0
+  },
+  {
+    "idPersona": 7,
+    "nombre": "Jos",
+    "apellido": "Calena",
+    "DNI": "19041242",
+    "celular": "09849532423",
+    "montoInvertido": 1400.2,
+    "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 8,
+    "nombre": "Cal",
+    "apellido": "Maldon",
+    "DNI": "19012342",
+    "celular": "0092471924",
+    "montoInvertido": 1400.2,
+    "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 9,
+    "nombre": "Cali",
+    "apellido": "Donma",
+    "DNI": "19048324",
+    "celular": "092492",
+    "montoInvertido": 1400.2,
+    "tipoInversionista": "Inversionista Publico"
+  }
+]

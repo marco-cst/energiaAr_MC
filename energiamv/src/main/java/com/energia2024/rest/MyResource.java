@@ -10,7 +10,7 @@ import javax.ws.rs.core.Response;
 
 import controller.Dao.implement.AdapterDao;
 import controller.Dao.services.PersonaServices;
-import models.Persona;
+import models.Inversionista;
 
 /**
  * Root resource (exposed at "myresource" path)
@@ -107,17 +107,24 @@ DE COMENTARIO*/
          String aux = "";
  
          try {
-             Persona persona = pd.getPersona();
+             //Persona persona = pd.getPersona();
+             Inversionista inversionista = new Inversionista(9, "Cali", "Donma", "19048324", "092492", 1400.20f, "Inversionista Publico");
+             /*
+             inversionista.setMontoInvertido(1000.75f);
+             inversionista.setTipoInversionista("Inversionista Privado");
              persona.setIdPersona(3);
              persona.setNombre("Juan");
              persona.setApellido("Aguilar");
              persona.setDNI("001-8765556-0");
              persona.setCelular("123-2345-086");
              
-             // Guardar la persona en un archivo JSON
+             Guardar la persona en un archivo JSON
+              
              AdapterDao.savePersona(persona, "personas.json");
+             */
+             AdapterDao.savePersona(inversionista, "inversionistas.json");
 
-             aux = "Persona guardada: " + persona;
+             aux = "Persona inversionista guardada: " + inversionista;
  
          } catch (Exception e) {
              System.out.println("Error al guardar: " + e);

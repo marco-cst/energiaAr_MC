@@ -73,10 +73,10 @@ public class PersonaDao extends AdapterDao{
     }
 
 //save por complementar
-    public void savePersona(Persona persona) {
-        // Implementar la lógica para guardar la persona
-        AdapterDao.savePersona(persona, "inversionista.json");
-    }
+    // public void savePersona(Persona persona) {
+    //     // Implementar la lógica para guardar la persona
+    //     AdapterDao.savePersona(persona, "inversionista.json");
+    // }
 
 
 }

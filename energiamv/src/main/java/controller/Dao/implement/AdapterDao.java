@@ -177,6 +177,33 @@ public class AdapterDao{
 
 
     //testeoooooos
+    /* PRIMERO FUNCIONA MENOS PARA LOS MONTOS ni TIPO INVESIONISTA
+    public static void savePersona(Persona nuevaPersona, String nombreArchivo) {
+        verificarDirectorio();
+        String rutaArchivo = BASE_PATH + "/" + nombreArchivo;
+    
+        // Cargar las personas existentes
+        Persona[] personasExistentes = cargarPersonas(nombreArchivo);
+    
+        // Crear un nuevo array con tamaño incrementado
+        Persona[] nuevasPersonas = new Persona[personasExistentes.length + 1];
+    
+        // Copiar las personas existentes al nuevo array
+        System.arraycopy(personasExistentes, 0, nuevasPersonas, 0, personasExistentes.length);
+    
+        // Agregar la nueva persona al final del nuevo array
+        nuevasPersonas[personasExistentes.length] = nuevaPersona;
+    
+        // Guardar el nuevo array en el archivo JSON
+        try (FileWriter writer = new FileWriter(rutaArchivo)) {
+            gson.toJson(nuevasPersonas, writer);
+            System.out.println("Archivo guardado en: " + rutaArchivo);
+        } catch (IOException e) {
+            System.out.println("Error al guardar el archivo: " + e.getMessage());
+        }
+    }
+    */
+
     public static void savePersona(Persona nuevaPersona, String nombreArchivo) {
         verificarDirectorio();
         String rutaArchivo = BASE_PATH + "/" + nombreArchivo;
