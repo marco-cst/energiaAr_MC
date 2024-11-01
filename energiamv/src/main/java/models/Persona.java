@@ -1,25 +1,28 @@
 package models;
 
+import com.google.gson.annotations.Expose;
+
 public class Persona {
+    @Expose
     private int idPersona;
+    @Expose
     private String nombre;
+    @Expose
     private String apellido;
+    @Expose
     private String DNI;
+    @Expose
     private String celular;
 
     private Inversionista inversionista;
 
+    @Expose
     private float montoInvertido;
+    @Expose
     private String tipoInversionista;
 
-
-//new
-    //private Persona obj;
-
     public Persona() {
-        //obj = new Persona();
     }
-//---
 
     public Persona(int idPersona, String nombre, String apellido, String DNI, String celular, float montoInvertido, String tipoInversionista) {
         this.idPersona = idPersona;

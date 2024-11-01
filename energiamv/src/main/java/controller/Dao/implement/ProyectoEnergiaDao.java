@@ -17,8 +17,6 @@ public class ProyectoEnergiaDao {
         this.proyectos =  new ProyectoEnergia[10]; //10 como base, pero aumentara el num en caso de llegar al limite
         this.cantidadProyectos = 0;
 
-        // this.inversionistas = new Inversionista[10];
-        // this.cantidadInversionistas = 0;
         this.inversionistaDao = new InversionistaDao();
     }
 
@@ -56,12 +54,10 @@ public class ProyectoEnergiaDao {
             directory.mkdirs();
         }
 
-        //AdapterDao.saveProyecto(proyectos, "src/main/java/Data/proyectos.json");
         for (ProyectoEnergia proyecto : proyectos) {
             AdapterDao.saveProyecto(proyecto, "src/main/java/Data/proyectos.json");
         }
 
-        //AdapterDao.saveInversionistas(inversionistaDao.getInversionistas(), "src/main/java/Data/inversionistas.json");
         for (Inversionista inversionista : inversionistaDao.getInversionistas()) {
             AdapterDao.saveInversionistas(inversionista, "src/main/java/Data/inversionistas.json");
         }

@@ -1,18 +1,31 @@
 package models;
 
+import com.google.gson.annotations.Expose;
+
 public class ProyectoEnergia {
+    @Expose
     private Integer idProyecto;
+    @Expose
     private String nombreProyecto;
+    @Expose
     private String estado;
+    @Expose
     private double montoInversion;
+    @Expose
     private String tiempoInicioConstruccion;
+    @Expose
     private String tiempoFinConstruccion;
+    @Expose
     private String tiempoVida;
+    @Expose
     private String ubicacion;
+    @Expose
     private float capacidadGeneracionDiaria;
     private int cantidadProyectos;
 
+    @Expose
     private Inversionista[] inversionistas;
+    @Expose
     private int numeroInversionistas;
 
     // Constructor
@@ -129,7 +142,7 @@ public class ProyectoEnergia {
         return cantidadProyectos;   
     }
 
-    public void setCantidadProyectos(){
+    public void setCantidadProyectos(int cantidadProyectos){
         this.cantidadProyectos = cantidadProyectos;
     }
 

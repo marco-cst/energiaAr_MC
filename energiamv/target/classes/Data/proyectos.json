@@ -9,7 +9,6 @@
     "tiempoVida": "20 años",
     "ubicacion": "El Oro",
     "capacidadGeneracionDiaria": 1000.0,
-    "cantidadProyectos": 0,
     "inversionistas": [
       null,
       null,
@@ -34,7 +33,6 @@
     "tiempoVida": "20 años",
     "ubicacion": "El Oro",
     "capacidadGeneracionDiaria": 1000.0,
-    "cantidadProyectos": 0,
     "inversionistas": [
       null,
       null,
@@ -59,7 +57,6 @@
     "tiempoVida": "20 años",
     "ubicacion": "Loja",
     "capacidadGeneracionDiaria": 120000.0,
-    "cantidadProyectos": 0,
     "inversionistas": [
       {
         "idPersona": 1,
@@ -79,5 +76,95 @@
       }
     ],
     "numeroInversionistas": 2
+  },
+  {
+    "idProyecto": 3,
+    "nombreProyecto": "Proyecto Paneles solares",
+    "estado": "En construccion",
+    "montoInversion": 900000.0,
+    "tiempoInicioConstruccion": "2020-02-02",
+    "tiempoFinConstruccion": "2023-10-31",
+    "tiempoVida": "21 años",
+    "ubicacion": "Loja",
+    "capacidadGeneracionDiaria": 120000.0,
+    "inversionistas": [
+      {
+        "idPersona": 4,
+        "nombre": "Martin",
+        "apellido": "Herrera",
+        "DNI": "110438765",
+        "celular": "098654334",
+        "montoInvertido": 0.0
+      },
+      {
+        "idPersona": 6,
+        "nombre": "Ana",
+        "apellido": "Salazar",
+        "DNI": "19023135",
+        "celular": "09849549853",
+        "montoInvertido": 0.0
+      }
+    ],
+    "numeroInversionistas": 3
+  },
+  {
+    "idProyecto": 4,
+    "nombreProyecto": "Proyecto Termo electrica",
+    "estado": "En construccion",
+    "montoInversion": 750000.0,
+    "tiempoInicioConstruccion": "2020-01-10",
+    "tiempoFinConstruccion": "2022-03-30",
+    "tiempoVida": "18 años",
+    "ubicacion": "Guataquill",
+    "capacidadGeneracionDiaria": 120000.0,
+    "inversionistas": [
+      {
+        "idPersona": 4,
+        "nombre": "Martin",
+        "apellido": "Herrera",
+        "DNI": "110438765",
+        "celular": "098654334",
+        "montoInvertido": 0.0
+      },
+      {
+        "idPersona": 6,
+        "nombre": "Ana",
+        "apellido": "Salazar",
+        "DNI": "19023135",
+        "celular": "09849549853",
+        "montoInvertido": 0.0
+      }
+    ],
+    "numeroInversionistas": 3
+  },
+  {
+    "idProyecto": 4,
+    "nombreProyecto": "Proyecto Termo electrica",
+    "estado": "En construccion",
+    "montoInversion": 750000.0,
+    "tiempoInicioConstruccion": "2020-01-10",
+    "tiempoFinConstruccion": "2022-03-30",
+    "tiempoVida": "18 años",
+    "ubicacion": "Guataquill",
+    "capacidadGeneracionDiaria": 120000.0,
+    "inversionistas": [
+      {
+        "idPersona": 4,
+        "nombre": "Martin",
+        "apellido": "Herrera",
+        "DNI": "110438765",
+        "celular": "098654334",
+        "montoInvertido": 0.0
+      },
+      {
+        "idPersona": 6,
+        "nombre": "Ana",
+        "apellido": "Salazar",
+        "DNI": "19023135",
+        "celular": "09849549853",
+        "montoInvertido": 0.0
+      }
+    ],
+    "numeroInversionistas": 3
   }
 ]

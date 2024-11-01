@@ -7,13 +7,7 @@ public class InversionistaDao {
     private int numeroInversionistas;
 
     private InversionistaDao obj;
-    //new
     private Integer size;
-
-
-    // public InversionistaDao(){
-    //     obj = new InversionistaDao();
-    // }
 
     public InversionistaDao() {
         inversionistas = new Inversionista[10];

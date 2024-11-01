@@ -14,7 +14,8 @@ import models.ProyectoEnergia;
 
 public class AdapterDao{
 
-    private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    //private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
 
     private static String BASE_PATH = "src/main/java/Data";
 
@@ -24,12 +25,8 @@ public class AdapterDao{
         if (!directorio.exists()) {
             directorio.mkdirs();
             System.out.println("Directorio creado: " + BASE_PATH);
-        } //else{
-            //throw new RuntimeException("El directorio existe ");
-        //}
+        }
     }
-
-    //new
 
     public static void saveProyecto(ProyectoEnergia nuevoProyecto, String nombreArchivo) {
         verificarDirectorio();
@@ -92,7 +89,7 @@ public class AdapterDao{
             return gson.fromJson(reader, Inversionista[].class);
         } catch (IOException e) {
             System.out.println("Error al cargar el archivo: " + e.getMessage());
-            return new Inversionista[0]; // Devuelve un array vacío en caso de error
+            return new Inversionista[0];
         }
     }
 
