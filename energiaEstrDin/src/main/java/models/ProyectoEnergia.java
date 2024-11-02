@@ -1,10 +1,12 @@
 package models;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.Expose;
 
 import controller.tda.list.LinkedList;
 
-public class ProyectoEnergia {
+public class ProyectoEnergia implements Serializable {
     @Expose
     private Integer idProyecto;
     @Expose

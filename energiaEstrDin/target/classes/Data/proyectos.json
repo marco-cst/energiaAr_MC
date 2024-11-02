@@ -24,5 +24,44 @@
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
     "numeroInversionistas": 0
+  },
+  {
+    "idProyecto": 4,
+    "nombreProyecto": "Proyecto Hidroelectrica",
+    "estado": "Construida",
+    "montoInversion": 750000.0,
+    "tiempoInicioConstruccion": "2020-01-10",
+    "tiempoFinConstruccion": "2022-03-30",
+    "tiempoVida": "18 años",
+    "ubicacion": "Guataquill",
+    "capacidadGeneracionDiaria": 120000.0,
+    "inversionistas": {},
+    "numeroInversionistas": 0
+  },
+  {
+    "idProyecto": 4,
+    "nombreProyecto": "Proyecto Hidroelectrica",
+    "estado": "Construida",
+    "montoInversion": 750000.0,
+    "tiempoInicioConstruccion": "2020-01-10",
+    "tiempoFinConstruccion": "2022-03-30",
+    "tiempoVida": "18 años",
+    "ubicacion": "Guataquill",
+    "capacidadGeneracionDiaria": 120000.0,
+    "inversionistas": {},
+    "numeroInversionistas": 0
+  },
+  {
+    "idProyecto": 4,
+    "nombreProyecto": "Proyecto Hidroelectrica",
+    "estado": "Construida",
+    "montoInversion": 750000.0,
+    "tiempoInicioConstruccion": "2020-01-10",
+    "tiempoFinConstruccion": "2022-03-30",
+    "tiempoVida": "18 años",
+    "ubicacion": "Guataquill",
+    "capacidadGeneracionDiaria": 120000.0,
+    "inversionistas": {},
+    "numeroInversionistas": 0
   }
 ]

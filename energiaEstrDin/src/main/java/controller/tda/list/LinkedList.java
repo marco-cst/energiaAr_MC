@@ -1,6 +1,8 @@
 package controller.tda.list;
 
-public class LinkedList<E> {
+import java.io.Serializable;
+
+public class LinkedList<E> implements Serializable{
     private Node<E> header; // cabeceza, primer nodo
     private Node<E> last;   // Cola, último nodo de la lista
     private Integer size;

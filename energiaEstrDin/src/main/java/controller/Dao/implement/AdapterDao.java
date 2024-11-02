@@ -65,6 +65,7 @@ public class AdapterDao {
         return proyectos;
     }
 
+
     public static void saveInversionistas(LinkedList<Inversionista> inversionistas, String filePath) {
         verificarDirectorio();
         String rutaArchivo = BASE_PATH + "/" + filePath;
@@ -89,7 +90,7 @@ public class AdapterDao {
         verificarDirectorio();
         String rutaArchivo = BASE_PATH + "/" + filePath;
 
-        LinkedList<Inversionista> inversionistas = new LinkedList<>();
+        LinkedList<Inversionista> inversionistas = new LinkedList<>(); //new LinkedList<>()
         try (FileReader reader = new FileReader(rutaArchivo)) {
             Inversionista[] arrayInversionistas = gson.fromJson(reader, Inversionista[].class);
             for (Inversionista inversionista : arrayInversionistas) {
@@ -100,4 +101,7 @@ public class AdapterDao {
         }
         return inversionistas;
     }
+
+
 }
+

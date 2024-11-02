@@ -65,9 +65,8 @@ public class MyResource {
         String aux = "";
     
         try {
-            ProyectoEnergia proyecto = new ProyectoEnergia(4, "Proyecto Hidroelectrica", "Construida", 750000.00, "2020-01-10", "2022-03-30", "18 años", "Guataquill", 120000.0f, 1);
-
             LinkedList<ProyectoEnergia> proyectosList = new LinkedList<>();
+            ProyectoEnergia proyecto = new ProyectoEnergia(4, "Proyecto Hidroelectrica", "Construida", 750000.00, "2020-01-10", "2022-03-30", "18 años", "Guataquill", 120000.0f, 1);
             proyectosList.add(proyecto);
             AdapterDao.saveProyectos(proyectosList, "proyectos.json");
 

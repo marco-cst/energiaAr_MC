@@ -2,7 +2,10 @@ package controller.tda.list;
 // T DATO GENERICO NORMAL
 // K,V PARA DICCIONARIOS
 
-public class Node <E>{
+import java.io.Serializable;
+
+
+public class Node <E> implements Serializable{
     private E info;
     Node <E> next;
 
