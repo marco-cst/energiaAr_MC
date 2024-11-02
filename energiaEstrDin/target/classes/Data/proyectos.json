@@ -1,0 +1,57 @@
+{
+  "header": {
+    "info": {
+      "idProyecto": 4,
+      "nombreProyecto": "Proyecto Termo electrica",
+      "estado": "En construccion",
+      "montoInversion": 750000.0,
+      "tiempoInicioConstruccion": "2020-01-10",
+      "tiempoFinConstruccion": "2022-03-30",
+      "tiempoVida": "18 años",
+      "ubicacion": "Guataquill",
+      "capacidadGeneracionDiaria": 120000.0,
+      "cantidadProyectos": 0,
+      "inversionistas": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "numeroInversionistas": 0
+    }
+  },
+  "last": {
+    "info": {
+      "idProyecto": 4,
+      "nombreProyecto": "Proyecto Termo electrica",
+      "estado": "En construccion",
+      "montoInversion": 750000.0,
+      "tiempoInicioConstruccion": "2020-01-10",
+      "tiempoFinConstruccion": "2022-03-30",
+      "tiempoVida": "18 años",
+      "ubicacion": "Guataquill",
+      "capacidadGeneracionDiaria": 120000.0,
+      "cantidadProyectos": 0,
+      "inversionistas": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "numeroInversionistas": 0
+    }
+  },
+  "size": 1
+}

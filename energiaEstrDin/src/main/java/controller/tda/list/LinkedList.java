@@ -1,0 +1,349 @@
+/*package controller.tda.list;
+
+import models.ProyectoEnergia;
+
+public class LinkedList<T> {
+    private Node<T> head;
+    private Node<T> last;
+    private int size; //int size
+
+    //new
+    private LinkedList<ProyectoEnergia> proyectos = new LinkedList<>();
+    
+    public LinkedList(){
+        this.head = null;
+        this.last = null;
+        this.size = 0;
+    }
+
+
+    public Node<T> getHead() {
+        return head;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public Boolean isEmpty(){
+        return (this.head == null || this.last == null);
+    }
+
+    
+    public  void add(T data){
+        Node<T> newNode = new Node<>(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node<T> current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
+            }
+            current.setNext(newNode);
+        }
+        size++;
+    }
+
+    public T get(int index){
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+        Node<T> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.getNext();
+        }
+        return current.getData();
+    }
+
+    public int size(){
+        return size;
+    }
+
+    public T[] toArray(T[] a) {
+        if (a.length < size) {
+            a = (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), size);
+        }
+        int i = 0;
+        Node<T> current = head;
+        while (current != null) {
+            a[i++] = current.getData();
+            current = current.getNext();
+        }
+        if (a.length > size) {
+            a[size] = null;
+        }
+        return a;
+    }
+    
+}
+*/
+
+package controller.tda.list;
+
+public class LinkedList<E> {
+    private Node<E> header; // cabeceza, primer nodo
+    private Node<E> last;   // Cola, último nodo de la lista
+    private Integer size;
+    
+
+    public LinkedList() {
+        this.header = null; 
+        this.last = null; 
+        this.size = 0;  
+    }
+
+    public Boolean isEmpty() {
+        return (this.header == null || this.size == 0);
+    }
+
+    private void addHeader(E dato) {
+        Node<E> help; 
+        if (isEmpty()) {
+            help = new Node<>(dato);  
+            header = help;
+            this.size++;
+        } else {
+            Node<E> healpHeader = this.header; 
+            help = new Node<>(dato, healpHeader); 
+            this.header = help;
+        }
+        this.size++;
+    }
+
+    private void addLast(E info) {
+        Node<E> help;
+        if (isEmpty()) {
+            help = new Node<>(info);
+            header = help;
+            last = help;
+        } else {
+            help = new Node<>(info, null);
+            last.setNext(help);
+            last = help;
+        }
+        this.size++; 
+    }
+
+    public void add(E info){
+        addLast(info);
+    }
+
+    private Node<E> getNode(Integer index) throws ListEmptyException, IndexOutOfBoundsException{
+        if(isEmpty()){
+            throw new ListEmptyException("Error, Lista vacia");
+        } else if(index.intValue() < 0 || index.intValue() >= this.size){
+            throw new IndexOutOfBoundsException("Error, fuera de rango");
+        } else if (index.intValue() == (this.size - 1)){
+            return last;
+        } else{
+            Node<E> search = header;
+            int cont = 0;
+            while(cont < index.intValue()){
+                cont++;
+                search = search.getNext();
+            }
+            return search;
+        }
+    }
+
+    private E getFirst() throws ListEmptyException{
+        if(isEmpty()){
+            throw new ListEmptyException("Error, lista vacia");
+        }
+        return last.getInfo();
+    }
+
+    public E getLast() throws ListEmptyException{
+        if(isEmpty()){
+            throw new ListEmptyException("Error, Lista Vacia");
+        }
+        return last.getInfo();
+    }
+
+    public E get (Integer index) throws ListEmptyException, IndexOutOfBoundsException{
+        if(isEmpty()){
+            throw new ListEmptyException("Error, lista vacia");        
+        } else if(index.intValue() < 0 || index.intValue() >= this.size.intValue()){
+            throw new IndexOutOfBoundsException("Error, fuera de rango");
+        } else if (index.intValue() == 0){
+            return header.getInfo();
+        } else if (index.intValue() == (this.size -1)){
+            return last.getInfo();
+        }else {
+            Node<E> search = header;
+            int cont = 0;
+            while (cont < index.intValue()){
+                cont++;
+                search = search.getNext();
+            }
+            return search.getInfo();
+        }
+    }
+
+    public void add(E info, Integer index) throws ListEmptyException, IndexOutOfBoundsException{
+        if(isEmpty() || index.intValue() == 0) {
+            addHeader(info);
+        } else if (index.intValue() == this.size.intValue()){
+            addLast(info);
+        } else{
+            Node<E> search_preview = getNode(index - 1);
+            Node<E> search = getNode(index);
+            Node<E> help = new Node<>(info, search);
+            search_preview.setNext(help);
+            this.size++;
+        }
+    }
+
+    public void reset(){
+        this.header = null;
+        this.last = null;
+        this.size = 0;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder(  "List data");
+        try{
+            Node<E> help = header;
+            while(help != null){
+                sb.append(help.getInfo()).append(" ->");
+                help = help.getNext();
+            }
+        }catch (Exception e){
+            sb.append(e.getMessage());
+        }
+        return sb.toString();
+    }
+
+    public Integer getSize(){
+        return this.size;
+    }
+    public Node<E> getHeader() {
+        return header;
+    }
+
+
+    public E[] toArray(){
+        E[] matrix = null;
+        if(!isEmpty()){
+            Class clazz = header.getInfo().getClass(); 
+            matrix = (E[])java.lang.reflect.Array.newInstance(clazz, size);
+            Node<E> aux = header;
+            for(int i = 0; i < this.size; i++){
+                matrix[i] = aux.getInfo();
+                aux = aux.getNext();
+            }
+
+        }
+        return matrix;
+    }
+
+    public LinkedList<E> toList(E[]matrix){
+        reset();
+    for (int i = 0; i < matrix.length; i++){
+        this.add(matrix[i]); 
+    }
+    return this;
+    }
+
+    //borrar
+
+    public int getLength() {
+        return this.size.intValue();
+    }
+
+    private void removeLast() throws ListEmptyException {
+        if (isEmpty()) {
+            throw new ListEmptyException("Error delete, lista vacia.");
+        } else {
+            Node<E> nodo_last = getNode((getLength() - 2));
+            nodo_last.setNext(null);
+            this.last = nodo_last;
+            this.size--;
+        }
+    }
+
+    private void removeFirst() throws ListEmptyException {
+        if (isEmpty()) {
+            throw new ListEmptyException("Error delete, lista vacia.");
+        } else {
+            Node<E> nodo_first = header;
+            Node<E> nodo_next_first = header.getNext();
+            nodo_first.setNext(null);
+            this.header = nodo_next_first;
+            this.size--;
+        }
+    }
+
+/* PR A
+
+    private void removeFirst() throws ListEmptyException {
+        if (isEmpty()) {
+            throw new ListEmptyException("Error, no puede eliminar datos de una lista vacia.");
+        } else {
+            Node<E> help = this.header;
+            Node<E> nextHeader = help.getNext();
+            this.header = nextHeader;
+            this.size--;
+        }
+    }
+*/
+
+    public void remove(int index) throws ListEmptyException, IndexOutOfBoundsException {
+        if (isEmpty()) {
+            throw new ListEmptyException("Lista vacia, no puede eliminar elementos");
+        } else if (index == 0) {
+            removeFirst();
+        } else if (index == (this.size - 1)) {
+            removeLast();
+        }
+    }
+
+    // pilas Stack
+    /*
+        // apilar
+    public void push(E element) {
+        Node<E> newNode = new Node<>(element);
+        newNode.setNext(header);
+        header = newNode;
+        size++;
+    }
+        // desapilar
+    public E pop() throws ListEmptyException {
+        if (isEmpty()) {
+            throw new ListEmptyException("Lista vacía, no puede eliminar elementos");
+        }
+        E data = header.getInfo();
+        header = header.getNext(); //.next
+        size--;
+        return data;
+    }
+
+    // colas queue
+        // encolar
+       
+    public void enqueue(E element) {
+        Node<E> newNode = new Node<>(element);
+        if (isEmpty()) {
+            header = newNode;
+        } else {
+            Node<E> current = header;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+        size++;
+    }
+        // desencolar
+    public E dequeue() throws ListEmptyException {
+        if (isEmpty()) {
+            throw new ListEmptyException("Lista vacía, no puede eliminar elementos");
+        }
+        E data = header.getInfo();
+        header = header.next;
+        size--;
+        return data;
+    }
+    */
+}

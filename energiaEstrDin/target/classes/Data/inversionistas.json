@@ -1,0 +1,25 @@
+{
+  "header": {
+    "info": {
+      "idPersona": 3,
+      "nombre": "Carlos",
+      "apellido": "Perez",
+      "DNI": "123456",
+      "celular": "0987654321",
+      "montoInvertido": 100000.0,
+      "tipoInversionista": "Inversionista Privado"
+    }
+  },
+  "last": {
+    "info": {
+      "idPersona": 3,
+      "nombre": "Carlos",
+      "apellido": "Perez",
+      "DNI": "123456",
+      "celular": "0987654321",
+      "montoInvertido": 100000.0,
+      "tipoInversionista": "Inversionista Privado"
+    }
+  },
+  "size": 1
+}
