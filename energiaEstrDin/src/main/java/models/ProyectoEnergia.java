@@ -2,6 +2,8 @@ package models;
 
 import com.google.gson.annotations.Expose;
 
+import controller.tda.list.LinkedList;
+
 public class ProyectoEnergia {
     @Expose
     private Integer idProyecto;
@@ -24,7 +26,9 @@ public class ProyectoEnergia {
     private int cantidadProyectos;
 
     @Expose
-    private Inversionista[] inversionistas;
+    private LinkedList<Inversionista> inversionistas;
+
+    //private Inversionista[] inversionistas;
     @Expose
     private int numeroInversionistas;
 
@@ -39,7 +43,7 @@ public class ProyectoEnergia {
         this.tiempoVida = tiempoVida;
         this.ubicacion = ubicacion;
         this.capacidadGeneracionDiaria = capacidadGeneracionDiaria;
-        this.inversionistas = new Inversionista[10]; //inicialmente sera 10, pero con metodos se podra aumentar
+        this.inversionistas = new LinkedList<>();
         this.numeroInversionistas = 0;
         this.cantidadProyectos = 0;
     }
@@ -119,13 +123,21 @@ public class ProyectoEnergia {
 
     // GS Inversionistas
 
-    public Inversionista[] getInversionistas() {
+    public LinkedList<Inversionista> getInversionistas() {
         return inversionistas;
     }
 
-    public void setInversionistas(Inversionista[] inversionistas) {
+    public void setInversionistas(LinkedList<Inversionista> inversionistas) {
         this.inversionistas = inversionistas;
     }
+
+    // public Inversionista[] getInversionistas() {
+    //     return inversionistas;
+    // }
+
+    // public void setInversionistas(Inversionista[] inversionistas) {
+    //     this.inversionistas = inversionistas;
+    // }
 
     public int getNumeroInversionistas() {
         return numeroInversionistas;

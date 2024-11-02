@@ -6,8 +6,10 @@ import models.ProyectoEnergia;
 
 
 public class ProyectoEnergiaDao {
-    private LinkedList<ProyectoEnergia> proyectos;
+    // private LinkedList<ProyectoEnergia> proyectos;
     
+    private LinkedList<ProyectoEnergia> proyectos = new LinkedList<>();
+
 
     public ProyectoEnergiaDao() {
         this.proyectos = new LinkedList<>();
@@ -25,41 +27,16 @@ public class ProyectoEnergiaDao {
         return proyectos.get(indice);
     }
 
-    // public LinkedList<ProyectoEnergia> getProyectos() {
-    //     return proyectos;
-    // }
-
     public LinkedList<ProyectoEnergia> getAllProyectos() {
         return proyectos;
     }
 
     public void guardarDatos() {
-        // Llamamos al método en AdapterDao para guardar la LinkedList de proyectos
         AdapterDao.saveProyectos(proyectos, "src/main/java/Data/proyectos.json");
     }
 
     public void cargarDatos() {
-        // Cargamos los datos y los asignamos a la lista de proyectos
-        proyectos = AdapterDao.loadProyectos("src/main/java/Data/proyectos.json");
+        proyectos = AdapterDao.cargarProyectos("src/main/java/Data/proyectos.json");
     }
 
-/*
-    public int getCantidadProyectos() {
-        return proyectos.size();
-    }
-
-    public void guardarDatos() {
-        ProyectoEnergia[] proyectosArray = proyectos.toArray(new ProyectoEnergia[proyectos.size()]);
-        AdapterDao.saveProyectos(proyectosArray, "src/main/java/Data/proyectos.json");
-    }
-
-    public void cargarDatos() {
-        ProyectoEnergia[] proyectosArray = AdapterDao.cargarProyectos("src/main/java/Data/proyectos.json");
-        proyectos = new LinkedList<>();
-        for (ProyectoEnergia proyecto : proyectosArray) {
-            proyectos.add(proyecto);
-        }
-    }
-
- */
 }

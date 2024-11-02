@@ -9,18 +9,16 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import controller.tda.list.LinkedList;
+import controller.tda.list.Node;
+import controller.tda.list.SerializableLinkedList;
 import models.Inversionista;
 import models.ProyectoEnergia;
 
-public class AdapterDao { //AdapterDao<T>
-    //private Class<T> clazz;
-    //private Gson g;
+public class AdapterDao {
 
-    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
+    private static Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
     private static String BASE_PATH = "src/main/java/Data";
 
-    
     private static void verificarDirectorio() {
         File directorio = new File(BASE_PATH);
 
@@ -30,58 +28,39 @@ public class AdapterDao { //AdapterDao<T>
         }
     }
 
-    //sin arrayList
-/*
-    public static void saveProyectos(LinkedList<ProyectoEnergia> proyectos, String filePath) {
-        // String json = gson.toJson(proyectos);
-        // System.out.println(json);
-        try (FileWriter writer = new FileWriter(filePath)){
-            ArrayList<ProyectoEnergia> list = proyectos.toArrayList(); // Convertimos a ArrayList temporal
-            gson.toJson(list, writer);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }    
-    }
- 
-    public static void saveProyectos(LinkedList<ProyectoEnergia> proyectos, String filePath) {
-        try (FileWriter writer = new FileWriter(filePath)) {
-            ProyectoEnergia[] array = proyectos.toArray(new ProyectoEnergia[proyectos.size()]);
-            gson.toJson(array, writer);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-*/
-
     public static void saveProyectos(LinkedList<ProyectoEnergia> proyectos, String filePath) {
         verificarDirectorio();
         String rutaArchivo = BASE_PATH + "/" + filePath;
 
-        
+        LinkedList<ProyectoEnergia> proyectosExistentes = cargarProyectos(filePath);
 
-        try (FileWriter writer = new FileWriter(filePath)) {
-            gson.toJson(proyectos, writer);
-            System.out.println("Archivo guardado en: " + filePath);
+        Node<ProyectoEnergia> current = proyectos.getHeader();
+        while (current != null) {
+            proyectosExistentes.add(current.getInfo());
+            current = current.getNext();
+        }
+
+        try (FileWriter writer = new FileWriter(rutaArchivo)) {
+            SerializableLinkedList<ProyectoEnergia> serializableList = new SerializableLinkedList<>(proyectosExistentes);
+            gson.toJson(serializableList.getElements(), writer);
+            System.out.println("Archivo datos proyectos guardado en: " + rutaArchivo);
         } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Error al guardar el archivo: " + e.getMessage());
+            System.out.println("Error al guardar el archivo proyectos: " + e.getMessage());
         }
     }
 
-
-    public static LinkedList<ProyectoEnergia> loadProyectos(String filePath) {
+    public static LinkedList<ProyectoEnergia> cargarProyectos(String filePath) {
         verificarDirectorio();
         String rutaArchivo = BASE_PATH + "/" + filePath;
-
+    
         LinkedList<ProyectoEnergia> proyectos = new LinkedList<>();
-        try (FileReader reader = new FileReader(filePath)) {
+        try (FileReader reader = new FileReader(rutaArchivo)) {
             ProyectoEnergia[] arrayProyectos = gson.fromJson(reader, ProyectoEnergia[].class);
             for (ProyectoEnergia proyecto : arrayProyectos) {
                 proyectos.add(proyecto);
             }
         } catch (IOException e) {
             System.out.println("Error al cargar el archivo: " + e.getMessage());
-            //e.printStackTrace();
         }
         return proyectos;
     }
@@ -90,49 +69,35 @@ public class AdapterDao { //AdapterDao<T>
         verificarDirectorio();
         String rutaArchivo = BASE_PATH + "/" + filePath;
 
-        try (FileWriter writer = new FileWriter(filePath)) {
-            gson.toJson(inversionistas, writer);
+        LinkedList<Inversionista> inversionistasExistentes = cargarInversionistas(filePath);
+        Node<Inversionista> current = inversionistas.getHeader();
+        while (current != null) {
+            inversionistasExistentes.add(current.getInfo());
+            current = current.getNext();
+        }
+
+        try (FileWriter writer = new FileWriter(rutaArchivo)) {
+            SerializableLinkedList<Inversionista> serializableList = new SerializableLinkedList<>(inversionistasExistentes);
+            gson.toJson(serializableList.getElements(), writer);
             System.out.println("Archivo datos inversionistas guardado en: " + rutaArchivo);
         } catch (IOException e) {
-            //e.printStackTrace();
             System.out.println("Error al guardar el archivo inversionistas: " + e.getMessage());
         }
     }
 
-
-    public static LinkedList<Inversionista> loadInversionistas(String filePath) {
+    public static LinkedList<Inversionista> cargarInversionistas(String filePath) {
         verificarDirectorio();
         String rutaArchivo = BASE_PATH + "/" + filePath;
 
         LinkedList<Inversionista> inversionistas = new LinkedList<>();
-        try (FileReader reader = new FileReader(filePath)) {
+        try (FileReader reader = new FileReader(rutaArchivo)) {
             Inversionista[] arrayInversionistas = gson.fromJson(reader, Inversionista[].class);
             for (Inversionista inversionista : arrayInversionistas) {
                 inversionistas.add(inversionista);
             }
         } catch (IOException e) {
-            //e.printStackTrace();
             System.out.println("Error al cargar el archivo: " + e.getMessage());
         }
         return inversionistas;
     }
-
-    //AGREGADOS PARA PROBAR
-    //     public static void saveInversionistas(LinkedList<Inversionista> inversionistas, String filePath) {
-    //     try (FileWriter writer = new FileWriter(filePath)) {
-    //         Inversionista[] array = inversionistas.toArray(new Inversionista[inversionistas.size()]);
-    //         gson.toJson(array, writer);
-    //     } catch (IOException e) {
-    //         e.printStackTrace();
-    //     }
-    // }
-
-    // public static void saveProyectos(LinkedList<ProyectoEnergia> proyectos, String filePath) {
-    //     try (FileWriter writer = new FileWriter(filePath)) {
-    //         ProyectoEnergia[] array = proyectos.toArray(new ProyectoEnergia[proyectos.size()]);
-    //         gson.toJson(array, writer);
-    //     } catch (IOException e) {
-    //         e.printStackTrace();
-    //     }
-    // }
 }

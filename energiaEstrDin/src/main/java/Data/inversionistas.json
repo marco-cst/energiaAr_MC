@@ -1,25 +1,83 @@
-{
-  "header": {
-    "info": {
-      "idPersona": 3,
-      "nombre": "Carlos",
-      "apellido": "Perez",
-      "DNI": "123456",
-      "celular": "0987654321",
-      "montoInvertido": 100000.0,
-      "tipoInversionista": "Inversionista Privado"
-    }
+[
+  {
+    "idPersona": 1,
+    "nombre": "Carlos",
+    "apellido": "Perez",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
   },
-  "last": {
-    "info": {
-      "idPersona": 3,
-      "nombre": "Carlos",
-      "apellido": "Perez",
-      "DNI": "123456",
-      "celular": "0987654321",
-      "montoInvertido": 100000.0,
-      "tipoInversionista": "Inversionista Privado"
-    }
+  {
+    "idPersona": 1,
+    "nombre": "Carlos",
+    "apellido": "Perez",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
   },
-  "size": 1
-}
+  {
+    "idPersona": 2,
+    "nombre": "Joan",
+    "apellido": "Paz",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 3,
+    "nombre": "Martin",
+    "apellido": "Diaz",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 4,
+    "nombre": "Lizet",
+    "apellido": "Cardenas",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 4,
+    "nombre": "Lizet",
+    "apellido": "Cardenas",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 4,
+    "nombre": "Lizet",
+    "apellido": "Cardenas",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 4,
+    "nombre": "Lizet",
+    "apellido": "Cardenas",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 4,
+    "nombre": "Lizet",
+    "apellido": "Cardenas",
+    "DNI": "123456",
+    "celular": "0987654321",
+    "montoInvertido": 100000.0,
+    "tipoInversionista": "Inversionista Privado"
+  }
+]

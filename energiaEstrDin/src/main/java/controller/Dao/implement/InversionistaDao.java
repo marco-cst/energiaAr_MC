@@ -24,12 +24,11 @@ public class InversionistaDao {
         return inversionistas;
     }
 
-    //new
     public void guardarDatos() {
         AdapterDao.saveInversionistas(inversionistas, "src/main/java/Data/inversionistas.json");
     }
 
     public void cargarDatos() {
-        inversionistas = AdapterDao.loadInversionistas("src/main/java/Data/inversionistas.json");
+        inversionistas = AdapterDao.cargarInversionistas("src/main/java/Data/inversionistas.json");
     }
 }

@@ -13,9 +13,6 @@ public class Persona {
     private String DNI;
     @Expose
     private String celular;
-
-    private Inversionista inversionista;
-
     @Expose
     private float montoInvertido;
     @Expose
@@ -33,7 +30,8 @@ public class Persona {
         this.montoInvertido = montoInvertido;
         this.tipoInversionista = tipoInversionista;
     }
- 
+
+    // Getters y Setters
     public int getIdPersona() {
         return idPersona;
     }
@@ -74,7 +72,6 @@ public class Persona {
         this.celular = celular;
     }
 
-    //testeo
     public float getMontoInvertido() {
         return montoInvertido;
     }
@@ -90,5 +87,4 @@ public class Persona {
     public void setTipoInversionista(String tipoInversionista) {
         this.tipoInversionista = tipoInversionista;
     }
-
 }
