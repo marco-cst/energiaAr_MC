@@ -32,14 +32,13 @@ public class MyResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
-        //System.out.println("Current working directory: " + System.getProperty("user.dir"));
         HashMap<String, String> mapa = new HashMap<>();
         PersonaServices pd = new PersonaServices();
         String aux = "";
 
         try {
             LinkedList<Inversionista> inversionistasList = new LinkedList<>();
-            Inversionista inversionista = new Inversionista(4, "Lizet", "Cardenas", "123456", "0987654321", 100000.00f, "Inversionista Privado");
+            Inversionista inversionista = new Inversionista(6, "Josep", "Benaditez", "0846593754", "0982356281", 140000.00f, "Inversionista Publico");
 
             inversionistasList.add(inversionista);
             AdapterDao.saveInversionistas(inversionistasList, "inversionistas.json");
@@ -68,7 +67,7 @@ public class MyResource {
     
         try {
             LinkedList<ProyectoEnergia> proyectosList = new LinkedList<>();
-            ProyectoEnergia proyecto = new ProyectoEnergia(7, "Proyecto Hidroelectrica", "Construida", 750000.00, "2020-01-10", "2022-03-30", "18 años", "Guataquill", 120000.0f, 1);
+            ProyectoEnergia proyecto = new ProyectoEnergia(5, "Proyecto Parque Eolico", "En construccion", 230000.00, "2023-01-10", "2025-03-30", "21 años", "Quito", 130000.0f, 0);
             proyectosList.add(proyecto);
             AdapterDao.saveProyectos(proyectosList, "proyectos.json");
     
