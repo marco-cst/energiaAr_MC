@@ -12,7 +12,7 @@
     "inversionistas": {},
     "numeroInversionistas": 0
   },
-{
+  {
     "idProyecto": 2,
     "nombreProyecto": "Proyecto Paneles Solares",
     "estado": "Construida",
@@ -25,7 +25,7 @@
     "inversionistas": {},
     "numeroInversionistas": 0
   },
-{
+  {
     "idProyecto": 3,
     "nombreProyecto": "Proyecto Eolico",
     "estado": "Construida",
@@ -38,7 +38,7 @@
     "inversionistas": {},
     "numeroInversionistas": 0
   },
-{
+  {
     "idProyecto": 4,
     "nombreProyecto": "Proyecto Geotermico",
     "estado": "Construida",
@@ -50,5 +50,18 @@
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
     "numeroInversionistas": 0
-}
+  },
+  {
+    "idProyecto": 5,
+    "nombreProyecto": "Proyecto Parque Eolico",
+    "estado": "En construccion",
+    "montoInversion": 230000.0,
+    "tiempoInicioConstruccion": "2023-01-10",
+    "tiempoFinConstruccion": "2025-03-30",
+    "tiempoVida": "21 años",
+    "ubicacion": "Quito",
+    "capacidadGeneracionDiaria": 130000.0,
+    "inversionistas": {},
+    "numeroInversionistas": 0
+  }
 ]

@@ -43,5 +43,14 @@
     "celular": "0987621312",
     "montoInvertido": 12300.0,
     "tipoInversionista": "Inversionista Privado"
+  },
+  {
+    "idPersona": 6,
+    "nombre": "Josep",
+    "apellido": "Benaditez",
+    "DNI": "0846593754",
+    "celular": "0982356281",
+    "montoInvertido": 140000.0,
+    "tipoInversionista": "Inversionista Publico"
   }
 ]
