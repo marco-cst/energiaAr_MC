@@ -1,44 +1,39 @@
 {% extends "template.html" %}
 
 {% block content %}
-<table class="table table-striped table-bordered w-100">
-    <thead>
-        <tr>
-            <th>ID Proyecto</th>
-            <th>Nombre Proyecto</th>
-            <th>Estado</th>
-            <th>Monto Inversión</th>
-            <th>Inicio Construcción</th>
-            <th>Fin Construcción</th>
-            <th>Vida</th>
-            <th>Ubicación</th>
-            <th>Capacidad Generación Diaria</th>
-            <th>Inversionistas</th>
-            <th>Número Inversionistas</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in lista %}
-        <tr>
-            <td>{{ item.idProyecto }}</td>
-            <td>{{ item.nombreProyecto }}</td>
-            <td>{{ item.estado }}</td>
-            <td>{{ item.montoInversion }}</td>
-            <td>{{ item.tiempoInicioConstruccion }}</td>
-            <td>{{ item.tiempoFinConstruccion }}</td>
-            <td>{{ item.tiempoVida }}</td>
-            <td>{{ item.ubicacion }}</td>
-            <td>{{ item.capacidadGeneracionDiaria }}</td>
-            <td>
-                <ul>
-                    {% for inversionista in item.inversionistas %}
-                    <li>{{ inversionista.nombre }} {{ inversionista.apellido }} ({{ inversionista.dni }})</li>
-                    {% endfor %}
-                </ul>
-            </td>
-            <td>{{ item.numeroInversionistas }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="container mt-4">
+    <h2>Lista de Proyectos</h2>
+    <table class="table table-striped table-bordered w-100 mt-4">
+        <thead>
+            <tr>
+                <th>ID Proyecto</th>
+                <th>Nombre Proyecto</th>
+                <th>Estado</th>
+                <th>Monto Inversión</th>
+                <th>Inicio Construcción</th>
+                <th>Fin Construcción</th>
+                <th>Vida</th>
+                <th>Ubicación</th>
+                <th>Capacidad Generación Diaria</th>
+                 <!-- <th>Número Inversionistas</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in lista %}
+            <tr>
+                <td>{{ item.idProyecto }}</td>
+                <td>{{ item.nombreProyecto }}</td>
+                <td>{{ item.estado }}</td>
+                <td>{{ item.montoInversion }}</td>
+                <td>{{ item.tiempoInicioConstruccion }}</td>
+                <td>{{ item.tiempoFinConstruccion }}</td>
+                <td>{{ item.tiempoVida }}</td>
+                <td>{{ item.ubicacion }}</td>
+                <td>{{ item.capacidadGeneracionDiaria }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}

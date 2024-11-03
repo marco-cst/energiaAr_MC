@@ -24,7 +24,13 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">PROYECTOS ENERGETICOS ECUADOR</h5>
-              <p>Datos acerca de proyectos, e inversionsitas para proyectos energeticos.</p>
+              <p>
+                Datos acerca de 
+                <a href="{{ url_for('router.mt_proyectos') }}">proyectos</a>, 
+                e 
+                <a href="{{ url_for('router.mt_inversionistas') }}">inversionistas</a> 
+                para proyectos energéticos.
+            </p>
               {% block content %}
               {% endblock %}
             </div>
