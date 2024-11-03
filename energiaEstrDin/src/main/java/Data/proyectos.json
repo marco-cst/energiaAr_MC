@@ -23,7 +23,7 @@
     "ubicacion": "Guayaquill",
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
-    "numeroInversionistas": 1
+    "numeroInversionistas": 0
   },
 {
     "idProyecto": 3,
@@ -36,7 +36,7 @@
     "ubicacion": "Loja",
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
-    "numeroInversionistas": 2
+    "numeroInversionistas": 0
   },
 {
     "idProyecto": 4,
@@ -49,6 +49,6 @@
     "ubicacion": "El Oro",
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
-    "numeroInversionistas": 1
+    "numeroInversionistas": 0
 }
 ]
