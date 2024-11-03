@@ -124,4 +124,24 @@ public class AdapterDao{
         }
     }
 
+    public static void updatePersona(Persona[] personas, int index, Persona nuevaPersona) throws IndexOutOfBoundsException {
+        if (index < 0 || index >= personas.length) {
+            throw new IndexOutOfBoundsException("Error, fuera de rango");
+        }
+        personas[index] = nuevaPersona;
+    }
+
+    public static Persona[] deletePersona(Persona[] personas, int index) throws IndexOutOfBoundsException {
+        if (index < 0 || index >= personas.length) {
+            throw new IndexOutOfBoundsException("Error, fuera de rango");
+        }
+        Persona[] nuevoArreglo = new Persona[personas.length - 1];
+        for (int i = 0, j = 0; i < personas.length; i++) {
+            if (i != index) {
+                nuevoArreglo[j++] = personas[i];
+            }
+        }
+        return nuevoArreglo;
+    }
+
 }

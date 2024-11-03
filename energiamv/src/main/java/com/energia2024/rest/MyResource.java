@@ -26,7 +26,7 @@ import models.ProyectoEnergia;
          String aux = "";
  
          try {
-             Inversionista inversionista = new Inversionista(10, "Dari", "Gonz", "190774393", "09244122392", 15600.20f, "Inversionista Privado");
+             Inversionista inversionista = new Inversionista(11, "Maria", "Bendett", "0700555327", "0922344234", 18600.20f, "Inversionista Publico");
 
              AdapterDao.savePersona(inversionista, "inversionistas.json");
 
@@ -53,7 +53,7 @@ import models.ProyectoEnergia;
          String aux = "";
  
          try {
-             ProyectoEnergia proyecto = new ProyectoEnergia(4, "Proyecto Termo electrica", "En construccion", 750000.00, "2020-01-10", "2022-03-30", "18 años", "Guataquill", 120000.0f, 1);
+             ProyectoEnergia proyecto = new ProyectoEnergia(5, "Proyecto Parque Eolico", "En construccion", 650000.00, "2022-03-05", "2024-05-20", "22 años", "Quito", 160000.0f, 2);
 
             //asginar inversionista a proyectos.
             Inversionista[] inversionistas = AdapterDao.cargarInversionistas("inversionistas.json");

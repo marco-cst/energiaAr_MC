@@ -39,7 +39,6 @@ public class InversionistaDao {
         return numeroInversionistas;
     }
 
-    //new
     public Inversionista[] getInversionistas() {
         return inversionistas;
     }
@@ -48,8 +47,6 @@ public class InversionistaDao {
         this.inversionistas = inversionistas;
         this.numeroInversionistas = inversionistas.length;
     }
-
-    //new 2
 
     public Integer getSize(){
         return this.size;
