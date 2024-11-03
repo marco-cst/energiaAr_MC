@@ -32,7 +32,7 @@ public class MyResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
-        System.out.println("Current working directory: " + System.getProperty("user.dir"));
+        //System.out.println("Current working directory: " + System.getProperty("user.dir"));
         HashMap<String, String> mapa = new HashMap<>();
         PersonaServices pd = new PersonaServices();
         String aux = "";
@@ -40,6 +40,7 @@ public class MyResource {
         try {
             LinkedList<Inversionista> inversionistasList = new LinkedList<>();
             Inversionista inversionista = new Inversionista(4, "Lizet", "Cardenas", "123456", "0987654321", 100000.00f, "Inversionista Privado");
+
             inversionistasList.add(inversionista);
             AdapterDao.saveInversionistas(inversionistasList, "inversionistas.json");
 

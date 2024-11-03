@@ -47,7 +47,7 @@ public Response getProyectos() {
     try {
         LinkedList<ProyectoEnergia> proyectos = AdapterDao.cargarProyectos("proyectos.json");
 
-        ProyectoEnergia[] proyectosArray = proyectos.toList(ProyectoEnergia.class);  // Pasa el tipo de clase
+        ProyectoEnergia[] proyectosArray = proyectos.toList(ProyectoEnergia.class);
 
         mapa.put("msg", "ok");
         mapa.put("data", proyectosArray);

@@ -1,93 +1,54 @@
 [
   {
-    "idProyecto": 7,
+    "idProyecto": 1,
     "nombreProyecto": "Proyecto Hidroelectrica",
     "estado": "Construida",
     "montoInversion": 750000.0,
     "tiempoInicioConstruccion": "2020-01-10",
     "tiempoFinConstruccion": "2022-03-30",
-    "tiempoVida": "18 años",
-    "ubicacion": "Guataquill",
+    "tiempoVida": "25 años",
+    "ubicacion": "Ibarra",
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
     "numeroInversionistas": 0
   },
-  {
-    "idProyecto": 7,
-    "nombreProyecto": "Proyecto Hidroelectrica",
+{
+    "idProyecto": 2,
+    "nombreProyecto": "Proyecto Paneles Solares",
     "estado": "Construida",
-    "montoInversion": 750000.0,
+    "montoInversion": 500000.0,
     "tiempoInicioConstruccion": "2020-01-10",
     "tiempoFinConstruccion": "2022-03-30",
     "tiempoVida": "18 años",
-    "ubicacion": "Guataquill",
+    "ubicacion": "Guayaquill",
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
-    "numeroInversionistas": 0
+    "numeroInversionistas": 1
   },
-  {
-    "idProyecto": 7,
-    "nombreProyecto": "Proyecto Hidroelectrica",
+{
+    "idProyecto": 3,
+    "nombreProyecto": "Proyecto Eolico",
     "estado": "Construida",
-    "montoInversion": 750000.0,
+    "montoInversion": 1000000.0,
     "tiempoInicioConstruccion": "2020-01-10",
     "tiempoFinConstruccion": "2022-03-30",
-    "tiempoVida": "18 años",
-    "ubicacion": "Guataquill",
+    "tiempoVida": "20 años",
+    "ubicacion": "Loja",
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
-    "numeroInversionistas": 0
+    "numeroInversionistas": 2
   },
-  {
-    "idProyecto": 7,
-    "nombreProyecto": "Proyecto Hidroelectrica",
+{
+    "idProyecto": 4,
+    "nombreProyecto": "Proyecto Geotermico",
     "estado": "Construida",
-    "montoInversion": 750000.0,
+    "montoInversion": 2000000.0,
     "tiempoInicioConstruccion": "2020-01-10",
     "tiempoFinConstruccion": "2022-03-30",
-    "tiempoVida": "18 años",
-    "ubicacion": "Guataquill",
+    "tiempoVida": "15 años",
+    "ubicacion": "El Oro",
     "capacidadGeneracionDiaria": 120000.0,
     "inversionistas": {},
-    "numeroInversionistas": 0
-  },
-  {
-    "idProyecto": 7,
-    "nombreProyecto": "Proyecto Hidroelectrica",
-    "estado": "Construida",
-    "montoInversion": 750000.0,
-    "tiempoInicioConstruccion": "2020-01-10",
-    "tiempoFinConstruccion": "2022-03-30",
-    "tiempoVida": "18 años",
-    "ubicacion": "Guataquill",
-    "capacidadGeneracionDiaria": 120000.0,
-    "inversionistas": {},
-    "numeroInversionistas": 0
-  },
-  {
-    "idProyecto": 7,
-    "nombreProyecto": "Proyecto Hidroelectrica",
-    "estado": "Construida",
-    "montoInversion": 750000.0,
-    "tiempoInicioConstruccion": "2020-01-10",
-    "tiempoFinConstruccion": "2022-03-30",
-    "tiempoVida": "18 años",
-    "ubicacion": "Guataquill",
-    "capacidadGeneracionDiaria": 120000.0,
-    "inversionistas": {},
-    "numeroInversionistas": 0
-  },
-  {
-    "idProyecto": 7,
-    "nombreProyecto": "Proyecto Hidroelectrica",
-    "estado": "Construida",
-    "montoInversion": 750000.0,
-    "tiempoInicioConstruccion": "2020-01-10",
-    "tiempoFinConstruccion": "2022-03-30",
-    "tiempoVida": "18 años",
-    "ubicacion": "Guataquill",
-    "capacidadGeneracionDiaria": 120000.0,
-    "inversionistas": {},
-    "numeroInversionistas": 0
-  }
+    "numeroInversionistas": 1
+}
 ]
