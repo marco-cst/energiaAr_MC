@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Proyectos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='vendor/simple-datatables/style.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+
+  <aside><!-- End Sidebar--></aside>
+
+  <main id="main" class="main">
+
+    <section class="section">
+      <div class="row">
+        <div class="col-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">PROYECTOS ENERGETICOS ECUADOR</h5>
+              <p>Datos acerca de proyectos, e inversionsitas para proyectos energeticos.</p>
+              {% block content %}
+              {% endblock %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+
+  <script src="{{url_for('static', filename='vendor/apexcharts/apexcharts.min.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/chart.js/chart.umd.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/echarts/echarts.min.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/quill/quill.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/simple-datatables/simple-datatables.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/tinymce/tinymce.min.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+</body>
+
+</html>
