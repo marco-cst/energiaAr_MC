@@ -34,6 +34,8 @@ public class ProyectoEnergia implements Serializable {
     @Expose
     private int numeroInversionistas;
 
+    
+
     // Constructor
     public ProyectoEnergia(Integer idProyecto, String nombreProyecto, String estado, double montoInversion, String tiempoInicioConstruccion, String tiempoFinConstruccion, String tiempoVida, String ubicacion, float capacidadGeneracionDiaria, int cantidadProyectos) {
         this.idProyecto = idProyecto;
@@ -50,7 +52,17 @@ public class ProyectoEnergia implements Serializable {
         this.cantidadProyectos = 0;
     }
 
+    //new
+
+    public ProyectoEnergia() {
+        this.inversionistas = new LinkedList<>();
+    }
+
     // Getters y Setters
+
+
+
+    
     public Integer getIdProyecto(){
         return idProyecto;
     }
@@ -123,23 +135,14 @@ public class ProyectoEnergia implements Serializable {
         this.capacidadGeneracionDiaria = capacidadGeneracionDiaria;
     }
 
-    // GS Inversionistas
-
-    public LinkedList<Inversionista> getInversionistas() {
-        return inversionistas;
+    public Inversionista[] getInversionistas() {
+        return inversionistas.toList(Inversionista.class);
     }
 
     public void setInversionistas(LinkedList<Inversionista> inversionistas) {
         this.inversionistas = inversionistas;
     }
 
-    // public Inversionista[] getInversionistas() {
-    //     return inversionistas;
-    // }
-
-    // public void setInversionistas(Inversionista[] inversionistas) {
-    //     this.inversionistas = inversionistas;
-    // }
 
     public int getNumeroInversionistas() {
         return numeroInversionistas;

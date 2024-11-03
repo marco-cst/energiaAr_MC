@@ -159,6 +159,18 @@ public class LinkedList<E> implements Serializable{
         }
         return matrix;
     }
+    
+    @SuppressWarnings("unchecked")
+    public E[] toList(Class<E> clazz) {
+        E[] array = (E[]) java.lang.reflect.Array.newInstance(clazz, size);
+        Node<E> current = header;
+        int index = 0;
+        while (current != null) {
+            array[index++] = current.getInfo();
+            current = current.getNext();
+        }
+        return array;
+    }
 
     public LinkedList<E> toList(E[]matrix){
         reset();
@@ -196,20 +208,6 @@ public class LinkedList<E> implements Serializable{
             this.size--;
         }
     }
-
-/* PR A
-
-    private void removeFirst() throws ListEmptyException {
-        if (isEmpty()) {
-            throw new ListEmptyException("Error, no puede eliminar datos de una lista vacia.");
-        } else {
-            Node<E> help = this.header;
-            Node<E> nextHeader = help.getNext();
-            this.header = nextHeader;
-            this.size--;
-        }
-    }
-*/
 
     public void remove(int index) throws ListEmptyException, IndexOutOfBoundsException {
         if (isEmpty()) {

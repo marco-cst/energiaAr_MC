@@ -37,25 +37,27 @@ public class ProyectosApi {
         }
     }
 
-    //proyectos
-    @GET
-    @Path("/infoProyectos")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getProyectos() {
-        HashMap<String, Object> mapa = new HashMap<>();
+//proyectos
+@GET
+@Path("/infoproyectos")
+@Produces(MediaType.APPLICATION_JSON)
+public Response getProyectos() {
+    HashMap<String, Object> mapa = new HashMap<>();
 
-        try {
-            LinkedList<ProyectoEnergia> proyectos = AdapterDao.cargarProyectos("proyectos.json");
+    try {
+        LinkedList<ProyectoEnergia> proyectos = AdapterDao.cargarProyectos("proyectos.json");
 
-            mapa.put("msg", "ok");
-            mapa.put("data", proyectos);
-            return Response.ok(mapa).build();
+        ProyectoEnergia[] proyectosArray = proyectos.toList(ProyectoEnergia.class);  // Pasa el tipo de clase
 
-        } catch (Exception e) {
-            System.out.println("Error al cargar proyectos: " + e);
-            mapa.put("msg", "error");
-            mapa.put("data", e.getMessage());
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(mapa).build();
-        }
+        mapa.put("msg", "ok");
+        mapa.put("data", proyectosArray);
+        return Response.ok(mapa).build();
+
+    } catch (Exception e) {
+        System.out.println("Error al cargar proyectos: " + e);
+        mapa.put("msg", "error");
+        mapa.put("data", e.getMessage());
+        return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(mapa).build();
     }
+}
 }

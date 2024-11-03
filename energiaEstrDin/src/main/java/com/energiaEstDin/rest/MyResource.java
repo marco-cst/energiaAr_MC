@@ -32,6 +32,7 @@ public class MyResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
+        System.out.println("Current working directory: " + System.getProperty("user.dir"));
         HashMap<String, String> mapa = new HashMap<>();
         PersonaServices pd = new PersonaServices();
         String aux = "";
@@ -66,19 +67,18 @@ public class MyResource {
     
         try {
             LinkedList<ProyectoEnergia> proyectosList = new LinkedList<>();
-            ProyectoEnergia proyecto = new ProyectoEnergia(4, "Proyecto Hidroelectrica", "Construida", 750000.00, "2020-01-10", "2022-03-30", "18 años", "Guataquill", 120000.0f, 1);
+            ProyectoEnergia proyecto = new ProyectoEnergia(7, "Proyecto Hidroelectrica", "Construida", 750000.00, "2020-01-10", "2022-03-30", "18 años", "Guataquill", 120000.0f, 1);
             proyectosList.add(proyecto);
             AdapterDao.saveProyectos(proyectosList, "proyectos.json");
-
-        aux = "Proyecto guardado: ";
     
+            aux = "Proyecto guardado: ";
         } catch (Exception e) {
             System.out.println("Error al guardar: " + e);
             mapa.put("msg", "error");
             mapa.put("data", e.getMessage());
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(mapa).build();
         }
-
+    
         mapa.put("msg", "ok");
         mapa.put("data", aux);
         return Response.ok(mapa).build();

@@ -6,7 +6,6 @@ import models.ProyectoEnergia;
 
 
 public class ProyectoEnergiaDao {
-    // private LinkedList<ProyectoEnergia> proyectos;
     
     private LinkedList<ProyectoEnergia> proyectos = new LinkedList<>();
 
@@ -18,10 +17,6 @@ public class ProyectoEnergiaDao {
     public void addProyecto(ProyectoEnergia proyecto){
         proyectos.add(proyecto);
     }
-
-    // public void removeProyecto(ProyectoEnergia proyecto) {
-    //     this.proyectos.remove(proyecto);
-    // }
 
     public ProyectoEnergia getProyectoEnergia(int indice) throws ListEmptyException {
         return proyectos.get(indice);

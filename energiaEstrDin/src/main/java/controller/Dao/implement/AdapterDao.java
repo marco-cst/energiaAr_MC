@@ -54,6 +54,7 @@ public class AdapterDao {
         String rutaArchivo = BASE_PATH + "/" + filePath;
     
         LinkedList<ProyectoEnergia> proyectos = new LinkedList<>();
+        
         try (FileReader reader = new FileReader(rutaArchivo)) {
             ProyectoEnergia[] arrayProyectos = gson.fromJson(reader, ProyectoEnergia[].class);
             for (ProyectoEnergia proyecto : arrayProyectos) {
@@ -64,7 +65,6 @@ public class AdapterDao {
         }
         return proyectos;
     }
-
 
     public static void saveInversionistas(LinkedList<Inversionista> inversionistas, String filePath) {
         verificarDirectorio();
