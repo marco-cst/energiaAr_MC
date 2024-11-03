@@ -3,8 +3,8 @@
     "idPersona": 1,
     "nombre": "Joan",
     "apellido": "Perez",
-    "DNI": "001-0000000-0",
-    "celular": "809-000-0000",
+    "DNI": "0789345734",
+    "celular": "0993451234",
     "montoInvertido": 10900.0,
     "tipoInversionista": "Inversionista Privado"
   },
@@ -12,7 +12,7 @@
     "idPersona": 2,
     "nombre": "Martin",
     "apellido": "Jofre",
-    "DNI": "07808023",
+    "DNI": "0780802334",
     "celular": "099988335",
     "montoInvertido": 20000.0,
     "tipoInversionista": "Inversionista Privado"
@@ -21,7 +21,7 @@
     "idPersona": 3,
     "nombre": "Maria",
     "apellido": "Balzar",
-    "DNI": "11034023",
+    "DNI": "1104534023",
     "celular": "098754343",
     "montoInvertido": 3500.0,
     "tipoInversionista": "Inversionista Privado"
@@ -30,7 +30,7 @@
     "idPersona": 4,
     "nombre": "Martin",
     "apellido": "Herrera",
-    "DNI": "110438765",
+    "DNI": "1104387657",
     "celular": "098654334",
     "montoInvertido": 12000.0,
     "tipoInversionista": "Inversionista Privado"
@@ -39,7 +39,7 @@
     "idPersona": 5,
     "nombre": "Angelo",
     "apellido": "Bolivar",
-    "DNI": "19045625",
+    "DNI": "1904562587",
     "celular": "098465763",
     "montoInvertido": 12000.0,
     "tipoInversionista": "Inversionista Privado"
@@ -48,7 +48,7 @@
     "idPersona": 6,
     "nombre": "Ana",
     "apellido": "Salazar",
-    "DNI": "19023135",
+    "DNI": "1902313598",
     "celular": "09849549853",
     "montoInvertido": 20000.0,
     "tipoInversionista": "Inversionista Privado"
@@ -57,7 +57,7 @@
     "idPersona": 7,
     "nombre": "Jos",
     "apellido": "Calena",
-    "DNI": "19041242",
+    "DNI": "1904124243",
     "celular": "09849532423",
     "montoInvertido": 1400.2,
     "tipoInversionista": "Inversionista Privado"
@@ -66,7 +66,7 @@
     "idPersona": 8,
     "nombre": "Cal",
     "apellido": "Maldon",
-    "DNI": "19012342",
+    "DNI": "1901234277",
     "celular": "0092471924",
     "montoInvertido": 1400.2,
     "tipoInversionista": "Inversionista Privado"
@@ -75,7 +75,7 @@
     "idPersona": 9,
     "nombre": "Cali",
     "apellido": "Donma",
-    "DNI": "19048324",
+    "DNI": "1904832422",
     "celular": "092492",
     "montoInvertido": 1800.2,
     "tipoInversionista": "Inversionista Publico"
@@ -84,7 +84,7 @@
     "idPersona": 10,
     "nombre": "Dari",
     "apellido": "Gonz",
-    "DNI": "190774393",
+    "DNI": "1907743933",
     "celular": "09244122392",
     "montoInvertido": 15600.2,
     "tipoInversionista": "Inversionista Privado"
