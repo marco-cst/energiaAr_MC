@@ -180,13 +180,33 @@ public class LinkedList<E> implements Serializable{
     return this;
     }
 
+    public void update(E data, Integer post)throws ListEmptyException{
+        if(isEmpty()){
+            throw new ListEmptyException("Error, lista vacia");
+        } else if(post < 0 || post >= this.size){
+            throw new IndexOutOfBoundsException("Error, fuera de rango");
+        } else if(post == 0){
+            header.setInfo(data);
+        } else if(post == (this.size - 1)){
+            last.setInfo(data);
+        } else{
+            Node<E> search = header;
+            int cont = 0;
+            while(cont < post){
+                cont++;
+                search = search.getNext();
+            }
+            search.setInfo(data);
+        }
+    }
+
     //borrar
 
     public int getLength() {
         return this.size.intValue();
     }
 
-    private void removeLast() throws ListEmptyException {
+    public void removeLast() throws ListEmptyException {
         if (isEmpty()) {
             throw new ListEmptyException("Error delete, lista vacia.");
         } else {
@@ -197,15 +217,18 @@ public class LinkedList<E> implements Serializable{
         }
     }
 
-    private void removeFirst() throws ListEmptyException {
+    public E removeFirst() throws ListEmptyException {
         if (isEmpty()) {
             throw new ListEmptyException("Error delete, lista vacia.");
         } else {
-            Node<E> nodo_first = header;
-            Node<E> nodo_next_first = header.getNext();
-            nodo_first.setNext(null);
-            this.header = nodo_next_first;
-            this.size--;
+            E element = header.getInfo();
+            Node<E> aux = header.getNext();
+            header = aux;
+            if (size.intValue() == 1) {
+                last = null;
+            } 
+            size--;
+            return element;
         }
     }
 
