@@ -12,8 +12,12 @@
             <th>Fin Construcción</th>
             <th>Vida</th>
             <th>Ubicación</th>
-            <th>Capacidad Generación Diaria</th>
+            <th>Capacidad Generación Diaria (MW)</th>
             <th>Inversionistas</th>
+            <th>DNI</th>
+            <th>Numero telefono</th>
+            <th>Monto Invertido</th>
+            <th>Tipo Inversionista</th>
             <th>Número Inversionistas</th>
         </tr>
     </thead>
@@ -32,10 +36,39 @@
             <td>
                 <ul>
                     {% for inversionista in item.inversionistas %}
-                    <li>{{ inversionista.nombre }} {{ inversionista.apellido }} ({{ inversionista.dni }})</li>
+                    <li>{{ inversionista.nombre }} {{ inversionista.apellido }}</li>
                     {% endfor %}
                 </ul>
             </td>
+            <td>
+                <ul>
+                    {% for inversionista in item.inversionistas %}
+                    <li>{{ inversionista.dni }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for inversionista in item.inversionistas %}
+                    <li>{{ inversionista.celular }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for inversionista in item.inversionistas %}
+                    <li>{{ inversionista.montoInvertido }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for inversionista in item.inversionistas %}
+                    <li>{{ inversionista.tipoInversionista }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+
             <td>{{ item.numeroInversionistas }}</td>
         </tr>
         {% endfor %}
